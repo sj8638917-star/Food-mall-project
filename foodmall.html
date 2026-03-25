@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FoodMall Premium – now with Specials category & Quality section. Massive variety meets creative excellence.">
+  <meta name="keywords" content="food mall, categories, Italian, American, Healthy, Japanese, Mexican, Desserts, Specials, quality, large menu">
+  <title>FoodMall · premium + specials & quality</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefcf5;
+      background-image: radial-gradient(circle at 20% 30%, rgba(199,62,58,0.02) 0%, transparent 20%),
+                        radial-gradient(circle at 80% 70%, rgba(244,180,58,0.02) 0%, transparent 25%);
+      color: #1e1e1e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    :root {
+      --primary: #c73e3a;
+      --primary-light: #e65c4f;
+      --secondary: #f4b43a;
+      --bg-light: #fffaf3;
+      --card-bg: #ffffff;
+      --text-dark: #1e1e1e;
+      --shadow-sm: 0 12px 28px -8px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
+      --shadow-hover: 0 24px 44px -12px rgba(199, 62, 58, 0.25);
+      --border-radius-card: 28px;
+    }
+    nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+    .logo i {
+      font-size: 2rem;
+      color: var(--primary);
+      background: linear-gradient(145deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .logo span {
+      color: var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-weight: 500;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover {
+      border-bottom-color: var(--primary);
+      color: var(--primary);
+    }
+    .hero {
+      padding: 8rem 2rem 6rem;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images01.nicepagecdn.com/page/10/73/website-design-preview-107393.jpg');
+      background-size: cover;
+      background-position: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      margin-bottom: 2rem;
+      color: white;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+    }
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    .hero .highlight {
+      color: var(--secondary);
+      background: none;
+      -webkit-text-fill-color: var(--secondary);
+    }
+    .hero p {
+      font-size: 1.5rem;
+      color: #f0f0f0;
+      margin-bottom: 2.5rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.9rem 2.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 12px 28px -8px rgba(199, 62, 58, 0.4);
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background: #b02e2a;
+      transform: scale(1.02);
+      box-shadow: 0 18px 32px -8px rgba(199,62,58,0.5);
+    }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 4px;
+    }
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0 2rem;
+      justify-content: center;
+    }
+    .category-btn {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+    .category-btn:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+    .category-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+    .product-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      cursor: pointer;
+      animation: fadeUp 0.5s ease backwards;
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(15px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s;
+      border-bottom: 2px solid #fff;
+    }
+    .product-card:hover img {
+      transform: scale(1.03);
+    }
+    .card-content {
+      padding: 1.2rem 1.2rem 1.5rem;
+    }
+    .card-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0.5rem 0 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .price small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #9b9b9b;
+    }
+    /* ----- ENHANCED QUALITY SECTION ----- */
+    .quality-section {
+      background: white;
+      border-radius: 60px 60px 60px 60px;
+      padding: 4rem 2rem;
+      margin: 5rem auto;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .quality-section::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(244,180,58,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .quality-section::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: -50px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(199,62,58,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 2;
+      margin-top: 1.5rem;
+    }
+    .quality-item {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 40px;
+      transition: 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.03);
+      box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+    .quality-item:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 20px 30px -10px rgba(199,62,58,0.2);
+      border-color: var(--primary-light);
+    }
+    .quality-icon {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(145deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .quality-item h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .quality-metric {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: rgba(199, 62, 58, 0.08);
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      margin: 0.5rem 0 0.8rem;
+      border: 1px dashed var(--primary-light);
+    }
+    .quality-item p {
+      color: #3a3a3a;
+      line-height: 1.6;
+      font-size: 0.98rem;
+      margin-top: auto;
+    }
+    /* ----- END QUALITY SECTION ----- */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0 4rem;
+    }
+    .gallery-item {
+      border-radius: 30px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      box-shadow: var(--shadow-sm);
+      transition: 0.4s ease;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s, filter 0.4s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.92);
+    }
+    .gallery-item::after {
+      content: "🍽️";
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      font-size: 2rem;
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+    .gallery-item:hover::after {
+      opacity: 1;
+      transform: rotate(8deg);
+    }
+    .contact-section {
+      background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+      color: #f1f1f1;
+      border-radius: 50px 50px 0 0;
+      padding: 4rem 2rem;
+      margin-top: 5rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin: 3rem 0;
+    }
+    .contact-info-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .info-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: var(--secondary);
+    }
+    .info-card i {
+      font-size: 2.2rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+    }
+    .info-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: white;
+    }
+    .info-card p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+    .contact-form-card {
+      background: white;
+      border-radius: 40px;
+      padding: 2.5rem;
+      box-shadow: 0 25px 40px -10px rgba(0,0,0,0.3);
+    }
+    .contact-form-card h3 {
+      font-size: 1.8rem;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+    #contactForm input,
+    #contactForm textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.2rem;
+      border: 2px solid #eee;
+      border-radius: 30px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+    #contactForm input:focus,
+    #contactForm textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    #contactForm .btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 3rem;
+      font-size: 0.95rem;
+      color: #aaa;
+      border-top: 1px solid #333;
+      margin-top: 3rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      animation: fadeModal 0.2s ease;
+    }
+    @keyframes fadeModal {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    .modal-content {
+      background: white;
+      max-width: 800px;
+      width: 90%;
+      border-radius: 40px;
+      box-shadow: 0 40px 70px rgba(0,0,0,0.3);
+      overflow: hidden;
+      position: relative;
+      animation: slideUp 0.3s;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-body {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .modal-body img {
+      width: 100%;
+      max-width: 350px;
+      object-fit: cover;
+      background: #faf0e6;
+    }
+    .modal-details {
+      padding: 2rem 1.8rem;
+      flex: 1;
+      min-width: 240px;
+    }
+    .modal-details h2 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #1e1e1e;
+    }
+    .modal-desc {
+      color: #4a4a4a;
+      margin: 1rem 0 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .modal-price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 1rem 0;
+    }
+    .buy-btn {
+      background: var(--primary);
+      border: none;
+      color: white;
+      padding: 1rem 2.8rem;
+      font-size: 1.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 8px 18px rgba(199,62,58,0.3);
+      width: 100%;
+    }
+    .buy-btn:hover {
+      background: #b02e2a;
+      transform: scale(1.01);
+    }
+    .close {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: #5f5f5f;
+      cursor: pointer;
+      line-height: 1;
+      z-index: 2;
+      transition: 0.2s;
+      background: rgba(255,255,255,0.5);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+    .close:hover {
+      color: #000;
+      background: white;
+      transform: rotate(90deg);
+    }
+    .more-info-btn {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1rem;
+      width: 100%;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+    .more-info-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+    #extendedModal .modal-content {
+      max-width: 650px;
+      background: #fefcf5;
+    }
+    .extended-details {
+      padding: 2.2rem;
+    }
+    .extended-details h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .extended-details p {
+      margin: 0.8rem 0;
+      font-size: 1.1rem;
+    }
+    .extended-details i {
+      color: var(--secondary);
+      width: 28px;
+    }
+    .extended-details hr {
+      margin: 1.5rem 0;
+      border: 1px solid #ddd;
+    }
+    .badge {
+      background: var(--primary-light);
+      color: white;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      display: inline-block;
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+    }
+    .info-strip {
+      background: white;
+      padding: 2rem 2rem;
+      border-radius: 50px;
+      margin: 3rem auto;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1.5rem;
+    }
+    .info-strip-item {
+      text-align: center;
+      flex: 1 1 150px;
+    }
+    .info-strip-item i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .info-strip-item span {
+      font-weight: 600;
+      display: block;
+      font-size: 1.2rem;
+    }
+    .info-strip-item small {
+      color: #666;
+    }
+    /* Admin table styling */
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+    .admin-table th, .admin-table td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    .admin-table th {
+      background-color: #faf3e8;
+      font-weight: 600;
+    }
+    .admin-table tr:hover {
+      background-color: #fef9f0;
+    }
+    .edit-btn, .delete-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin: 0 0.25rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 20px;
+      transition: 0.2s;
+    }
+    .edit-btn { color: var(--secondary); }
+    .edit-btn:hover { background: rgba(244,180,58,0.2); }
+    .delete-btn { color: var(--primary); }
+    .delete-btn:hover { background: rgba(199,62,58,0.1); }
+    #adminProductForm input, #adminProductForm select {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0 1rem;
+      border: 2px solid #eee;
+      border-radius: 30px;
+      font-family: 'Inter', sans-serif;
+    }
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .cancel-btn {
+      background: #ccc;
+      color: #333;
+      box-shadow: none;
+    }
+    .cancel-btn:hover {
+      background: #b3b3b3;
+    }
+    @media (max-width: 800px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 700px) {
+      nav { flex-direction: column; gap: 0.8rem; }
+      .nav-links { gap: 1.5rem; }
+      .hero h1 { font-size: 2.5rem; }
+      .hero { min-height: 60vh; padding: 4rem 2rem; }
+      .modal-body img { max-width: 100%; height: 250px; }
+      .container { padding: 0 1.2rem; }
+      .logo { font-size: 1.5rem; }
+      .logo i { font-size: 1.8rem; }
+    }
+    @media (max-width: 480px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .info-card { padding: 1.5rem; }
+      .contact-form-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home" class="logo">
+      <i class="fas fa-utensils"></i> Food<span>Mall</span>
+    </a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#quality">Quality</a>
+      <a href="#contact">Contact</a>
+      <!-- Login / Admin links -->
+      <a href="#" id="loginLink">Login</a>
+      <a href="#" id="adminLink" style="display:none;">Admin</a>
+      <a href="#" id="logoutLink" style="display:none;">Logout</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <h1>7+ dishes per <span class="highlight">category</span> + specials</h1>
+        <p>Seven cuisine lists • 56+ creative items • click any for details + extended info</p>
+        <a href="#categories" class="btn">explore menus <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="info-strip">
+      <div class="info-strip-item"><i class="fas fa-leaf"></i><span>fresh ingredients</span><small>daily sourced</small></div>
+      <div class="info-strip-item"><i class="fas fa-truck"></i><span>30min delivery</span><small>free over $25</small></div>
+      <div class="info-strip-item"><i class="fas fa-award"></i><span>chef's specials</span><small>since 2012</small></div>
+      <div class="info-strip-item"><i class="fas fa-utensils"></i><span>56+ dishes</span><small>7 categories</small></div>
+    </div>
+  </div>
+
+  <section id="categories" class="container">
+    <h2 class="section-title">food lists</h2>
+    <div class="category-tabs">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="italian">Italian (8)</button>
+      <button class="category-btn" data-category="american">American (8)</button>
+      <button class="category-btn" data-category="healthy">Healthy (8)</button>
+      <button class="category-btn" data-category="japanese">Japanese (8)</button>
+      <button class="category-btn" data-category="mexican">Mexican (8)</button>
+      <button class="category-btn" data-category="desserts">Desserts (8)</button>
+      <button class="category-btn" data-category="specials">Specials (8)</button>
+    </div>
+
+    <!-- PRODUCT GRID – 56 items (same as before) -->
+    <div class="product-grid" id="product-grid">
+      <!-- ... all original 56 product cards ... (kept exactly as in the original code) -->
+      <!-- Italian (8) -->
+      <div class="product-card" data-category="italian" data-name="Margherita pizza" data-price="14.99" data-desc="Wood-fired thin crust, San Marzano tomatoes, fresh mozzarella, basil, extra virgin olive oil." data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&auto=format"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=260&fit=crop" alt="Margherita pizza" loading="lazy"><div class="card-content"><h3>Margherita pizza</h3><div class="price">$14.99 <small>/ classic</small></div></div></div>
+      <div class="product-card" data-category="italian" data-name="Pasta carbonara" data-price="15.75" data-desc="Spaghetti, guanciale, egg yolk, pecorino romano, black pepper – creamy & authentic." data-image="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=800&auto=format"><img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400&h=260&fit=crop" alt="Pasta carbonara" loading="lazy"><div class="card-content"><h3>Pasta carbonara</h3><div class="price">$15.75 <small>/ classic</small></div></div></div>
+      <div class="product-card" data-category="italian" data-name="Lasagna al forno" data-price="16.50" data-desc="Layered pasta with beef ragù, béchamel, parmesan, baked to golden perfection." data-image="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=800&auto=format"><img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=260&fit=crop" alt="Lasagna" loading="lazy"><div class="card-content"><h3>Lasagna al forno</h3><div class="price">$16.50 <small>/ hearty</small></div></div></div>
+      <div class="product-card" data-category="italian" data-name="Risotto ai funghi" data-price="17.25" data-desc="Creamy arborio rice with wild mushrooms, parmesan, truffle oil, fresh parsley." data-image="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&auto=format"><img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&h=260&fit=crop" alt="Risotto" loading="lazy"><div class="card-content"><h3>Risotto funghi</h3><div class="price">$17.25 <small>/ truffle</small></div></div></div>
+      <div class="product-card" data-category="italian" data-name="Gnocchi sorrentina" data-price="13.90" data-desc="Potato gnocchi, tomato sauce, fresh mozzarella, basil, baked in a terracotta pot." data-image="https://deeslittlekitchn.com/wp-content/uploads/2023/05/01012065-01-scaled.jpeg" data-img-large="https://deeslittlekitchn.com/wp-content/uploads/2023/05/01012065-01-scaled.jpeg"><img src="https://deeslittlekitchn.com/wp-content/uploads/2023/05/01012065-01-scaled.jpeg" alt="Gnocchi" loading="lazy"><div class="card-content"><h3>Gnocchi sorrentina</h3><div class="price">$13.90 <small>/ baked</small></div></div></div>
+      <div class="product-card" data-category="italian" data-name="Fettuccine Alfredo" data-price="14.50" data-desc="Fettuccine pasta, butter, heavy cream, parmesan cheese, black pepper." data-image="https://jaxcooking.mystagingwebsite.com/wp-content/uploads/2020/07/Iron-Chef-Bootcamp-Fettuccine-Alfredo-900x675-1.jpg" data-img-large="https://jaxcooking.mystagingwebsite.com/wp-content/uploads/2020/07/Iron-Chef-Bootcamp-Fettuccine-Alfredo-900x675-1.jpg"><img src="https://jaxcooking.mystagingwebsite.com/wp-content/uploads/2020/07/Iron-Chef-Bootcamp-Fettuccine-Alfredo-900x675-1.jpg" alt="Fettuccine" loading="lazy"><div class="card-content"><h3>Fettuccine Alfredo</h3><div class="price">$14.50 <small>/ creamy</small></div></div></div>
+      <div class="product-card" data-category="italian" data-name="Bruschetta trio" data-price="9.50" data-desc="Grilled bread topped with tomato-basil, mushroom-truffle, and olive tapenade." data-image="https://images.getrecipekit.com/20211007232055-tomato-smoked-salt-bruschetta-trio-recipe.jpg?aspect_ratio=16:9&quality=90&" data-img-large="https://images.getrecipekit.com/20211007232055-tomato-smoked-salt-bruschetta-trio-recipe.jpg?aspect_ratio=16:9&quality=90&"><img src="https://images.getrecipekit.com/20211007232055-tomato-smoked-salt-bruschetta-trio-recipe.jpg?aspect_ratio=16:9&quality=90&" alt="Bruschetta" loading="lazy"><div class="card-content"><h3>Bruschetta trio</h3><div class="price">$9.50 <small>/ starter</small></div></div></div>
+      <div class="product-card" data-category="italian" data-name="Tiramisu" data-price="7.95" data-desc="Classic Italian dessert: espresso-soaked ladyfingers, mascarpone cream, cocoa." data-image="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&auto=format"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=260&fit=crop" alt="Tiramisu" loading="lazy"><div class="card-content"><h3>Tiramisu</h3><div class="price">$7.95 <small>/ dessert</small></div></div></div>
+      <!-- American (8) -->
+      <div class="product-card" data-category="american" data-name="Smash burger" data-price="12.49" data-desc="Double beef patty, caramelized onions, cheddar, pickles, secret sauce, brioche bun." data-image="https://images.unsplash.com/photo-1561758033-7e924f619b47?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1561758033-7e924f619b47?w=800&auto=format"><img src="https://images.unsplash.com/photo-1561758033-7e924f619b47?w=400&h=260&fit=crop" alt="Smash burger" loading="lazy"><div class="card-content"><h3>Smash burger</h3><div class="price">$12.49 <small>/ double</small></div></div></div>
+      <div class="product-card" data-category="american" data-name="Sirloin steak" data-price="24.90" data-desc="Grass-fed sirloin, rosemary butter, confit garlic, roasted seasonal veggies." data-image="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics/grilled_sirloin_steak.jpg" data-img-large="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics/grilled_sirloin_steak.jpg"><img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics/grilled_sirloin_steak.jpg" alt="Sirloin steak" loading="lazy"><div class="card-content"><h3>Sirloin steak</h3><div class="price">$24.90 <small>/ grass-fed</small></div></div></div>
+      <div class="product-card" data-category="american" data-name="BBQ ribs" data-price="21.50" data-desc="Slow-cooked pork ribs, smoky BBQ sauce, coleslaw, seasoned fries." data-image="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&auto=format"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=260&fit=crop" alt="BBQ ribs" loading="lazy"><div class="card-content"><h3>BBQ ribs</h3><div class="price">$21.50 <small>/ full rack</small></div></div></div>
+      <div class="product-card" data-category="american" data-name="Philly cheesesteak" data-price="13.95" data-desc="Thinly sliced ribeye, melted provolone, grilled onions, peppers, hoagie roll." data-image="https://images.unsplash.com/photo-1554520735-0a6b8b6ce8b7?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1554520735-0a6b8b6ce8b7?w=800&auto=format"><img src="https://images.unsplash.com/photo-1554520735-0a6b8b6ce8b7?w=400&h=260&fit=crop" alt="Philly cheesesteak" loading="lazy"><div class="card-content"><h3>Philly cheesesteak</h3><div class="price">$13.95 <small>/ classic</small></div></div></div>
+      <div class="product-card" data-category="american" data-name="Fried chicken" data-price="11.25" data-desc="Buttermilk brined chicken, crispy coating, served with honey and waffles." data-image="https://images.unsplash.com/photo-1562967914-608f82629710?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1562967914-608f82629710?w=800&auto=format"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=260&fit=crop" alt="Fried chicken" loading="lazy"><div class="card-content"><h3>Fried chicken & waffles</h3><div class="price">$11.25 <small>/ soul food</small></div></div></div>
+      <div class="product-card" data-category="american" data-name="Lobster roll" data-price="18.90" data-desc="Fresh lobster meat, lemon aioli, celery, toasted brioche roll, served with chips." data-image="https://atlanticbakers.ca/wp-content/uploads/2024/05/AB-Lobster-Rolls.jpg" data-img-large="https://atlanticbakers.ca/wp-content/uploads/2024/05/AB-Lobster-Rolls.jpg"><img src="https://atlanticbakers.ca/wp-content/uploads/2024/05/AB-Lobster-Rolls.jpg" alt="Lobster roll" loading="lazy"><div class="card-content"><h3>Lobster roll</h3><div class="price">$18.90 <small>/ maine style</small></div></div></div>
+      <div class="product-card" data-category="american" data-name="Mac & cheese" data-price="8.50" data-desc="Creamy cavatappi pasta, cheddar, gruyère, crispy breadcrumb topping." data-image="https://www.pressurecookrecipes.com/wp-content/uploads/2022/12/instant-pot-mac-and-cheese.jpg" data-img-large="https://www.pressurecookrecipes.com/wp-content/uploads/2022/12/instant-pot-mac-and-cheese.jpg"><img src="https://www.pressurecookrecipes.com/wp-content/uploads/2022/12/instant-pot-mac-and-cheese.jpg" alt="Mac and cheese" loading="lazy"><div class="card-content"><h3>Mac & cheese</h3><div class="price">$8.50 <small>/ side</small></div></div></div>
+      <div class="product-card" data-category="american" data-name="Apple pie" data-price="6.95" data-desc="Homemade apple pie with lattice crust, cinnamon, served with vanilla ice cream." data-image="https://anitalianinmykitchen.com/wp-content/uploads/2023/02/cescent-roll-ups-sq-1-of-1.jpg" data-img-large="https://anitalianinmykitchen.com/wp-content/uploads/2023/02/cescent-roll-ups-sq-1-of-1.jpg"><img src="https://anitalianinmykitchen.com/wp-content/uploads/2023/02/cescent-roll-ups-sq-1-of-1.jpg" alt="Apple pie" loading="lazy"><div class="card-content"><h3>Apple pie</h3><div class="price">$6.95 <small>/ slice</small></div></div></div>
+      <!-- Healthy (8) -->
+      <div class="product-card" data-category="healthy" data-name="Harvest salad" data-price="10.95" data-desc="Kale, quinoa, roasted pumpkin, feta, pomegranate, lemon-tahini dressing." data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=260&fit=crop" alt="Harvest salad" loading="lazy"><div class="card-content"><h3>Harvest salad</h3><div class="price">$10.95 <small>/ bowl</small></div></div></div>
+      <div class="product-card" data-category="healthy" data-name="Buddha bowl" data-price="13.25" data-desc="Brown rice, chickpeas, avocado, beetroot, carrot, spinach, almond satay." data-image="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=260&fit=crop" alt="Buddha bowl" loading="lazy"><div class="card-content"><h3>Buddha bowl</h3><div class="price">$13.25 <small>/ vegan</small></div></div></div>
+      <div class="product-card" data-category="healthy" data-name="Mango smoothie" data-price="8.25" data-desc="Creamy mango & banana blend, topped with granola, coconut flakes, fresh berries, chia seeds." data-image="https://rannaghor.org/wp-content/uploads/2025/03/Banana-Mango-Smoothie.webp" data-img-large="https://rannaghor.org/wp-content/uploads/2025/03/Banana-Mango-Smoothie.webp"><img src="https://rannaghor.org/wp-content/uploads/2025/03/Banana-Mango-Smoothie.webp" alt="Mango smoothie bowl" loading="lazy"><div class="card-content"><h3>Mango smoothie</h3><div class="price">$8.25 <small>/ bowl</small></div></div></div>
+      <div class="product-card" data-category="healthy" data-name="Grilled salmon" data-price="18.50" data-desc="Wild salmon, lemon herb marinade, steamed asparagus, quinoa pilaf." data-image="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&auto=format"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=260&fit=crop" alt="Grilled salmon" loading="lazy"><div class="card-content"><h3>Grilled salmon</h3><div class="price">$18.50 <small>/ omega-3</small></div></div></div>
+      <div class="product-card" data-category="healthy" data-name="Zucchini noodles" data-price="11.75" data-desc="Zucchini spirals, pesto, cherry tomatoes, pine nuts, parmesan (vegan option)." data-image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&auto=format"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=260&fit=crop" alt="Zucchini noodles" loading="lazy"><div class="card-content"><h3>Zucchini noodles</h3><div class="price">$11.75 <small>/ low-carb</small></div></div></div>
+      <div class="product-card" data-category="healthy" data-name="Acai bowl" data-price="9.50" data-desc="Acai puree, banana, granola, strawberries, blueberries, honey." data-image="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&auto=format"><img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=400&h=260&fit=crop" alt="Acai bowl" loading="lazy"><div class="card-content"><h3>Acai bowl</h3><div class="price">$9.50 <small>/ antioxidant</small></div></div></div>
+      <div class="product-card" data-category="healthy" data-name="Quinoa tabbouleh" data-price="8.95" data-desc="Quinoa, parsley, mint, cucumber, tomato, lemon-olive oil dressing." data-image="https://assets-global.website-files.com/602b89a194315cfeff504d81/621f3e8593da04845a40e3b5_602b8b3d644910489c023fdc_60080bcef994c413da390f07_TABBOULEH-CON-QUINOA.jpg" data-img-large="https://assets-global.website-files.com/602b89a194315cfeff504d81/621f3e8593da04845a40e3b5_602b8b3d644910489c023fdc_60080bcef994c413da390f07_TABBOULEH-CON-QUINOA.jpg"><img src="https://assets-global.website-files.com/602b89a194315cfeff504d81/621f3e8593da04845a40e3b5_602b8b3d644910489c023fdc_60080bcef994c413da390f07_TABBOULEH-CON-QUINOA.jpg" alt="Quinoa tabbouleh" loading="lazy"><div class="card-content"><h3>Quinoa tabbouleh</h3><div class="price">$8.95 <small>/ fresh</small></div></div></div>
+      <div class="product-card" data-category="healthy" data-name="Kale Caesar" data-price="10.50" data-desc="Kale, romaine, parmesan, whole grain croutons, light caesar dressing." data-image="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=800&auto=format"><img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400&h=260&fit=crop" alt="Kale Caesar" loading="lazy"><div class="card-content"><h3>Kale Caesar</h3><div class="price">$10.50 <small>/ light</small></div></div></div>
+      <!-- Japanese (8) -->
+      <div class="product-card" data-category="japanese" data-name="Sushi platter" data-price="18.50" data-desc="Assorted nigiri and maki: salmon, tuna, avocado cucumber roll, pickled ginger, wasabi, soy sauce." data-image="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&auto=format"><img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&h=260&fit=crop" alt="Sushi platter" loading="lazy"><div class="card-content"><h3>Sushi platter</h3><div class="price">$18.50 <small>/ 12 pcs</small></div></div></div>
+      <div class="product-card" data-category="japanese" data-name="Dumplings gyoza" data-price="9.50" data-desc="Pan-fried pork & cabbage dumplings, served with soy-vinegar dipping sauce, sesame." data-image="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&auto=format"><img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&h=260&fit=crop" alt="Dumplings gyoza" loading="lazy"><div class="card-content"><h3>Dumplings gyoza</h3><div class="price">$9.50 <small>/ 6 pcs</small></div></div></div>
+      <div class="product-card" data-category="japanese" data-name="Ramen tonkotsu" data-price="14.25" data-desc="Pork bone broth, chashu, soft-boiled egg, bamboo shoots, nori, scallions." data-image="https://www.mizkanchef.com/wp-content/uploads/2020/09/ramen-tonkotsu-2560x1106.jpg" data-img-large="https://www.mizkanchef.com/wp-content/uploads/2020/09/ramen-tonkotsu-2560x1106.jpg"><img src="https://www.mizkanchef.com/wp-content/uploads/2020/09/ramen-tonkotsu-2560x1106.jpg" alt="Ramen" loading="lazy"><div class="card-content"><h3>Ramen tonkotsu</h3><div class="price">$14.25 <small>/ rich broth</small></div></div></div>
+      <div class="product-card" data-category="japanese" data-name="Tempura udon" data-price="13.50" data-desc="Thick udon noodles in dashi broth, served with shrimp and vegetable tempura." data-image="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=800&auto=format"><img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=260&fit=crop" alt="Tempura udon" loading="lazy"><div class="card-content"><h3>Tempura udon</h3><div class="price">$13.50 <small>/ noodle soup</small></div></div></div>
+      <div class="product-card" data-category="japanese" data-name="Chicken katsu" data-price="12.95" data-desc="Breaded and fried chicken cutlet, tonkatsu sauce, shredded cabbage, rice." data-image="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=800&auto=format"><img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=260&fit=crop" alt="Chicken katsu" loading="lazy"><div class="card-content"><h3>Chicken katsu</h3><div class="price">$12.95 <small>/ curry</small></div></div></div>
+      <div class="product-card" data-category="japanese" data-name="Sashimi moriawase" data-price="19.90" data-desc="Fresh sliced salmon, tuna, yellowtail, served with daikon, shiso, soy sauce." data-image="https://images.unsplash.com/photo-1553163147-622ab57be1c7?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1553163147-622ab57be1c7?w=800&auto=format"><img src="https://images.unsplash.com/photo-1553163147-622ab57be1c7?w=400&h=260&fit=crop" alt="Sashimi" loading="lazy"><div class="card-content"><h3>Sashimi platter</h3><div class="price">$19.90 <small>/ 15 pcs</small></div></div></div>
+      <div class="product-card" data-category="japanese" data-name="Okonomiyaki" data-price="11.25" data-desc="Savory Japanese pancake with cabbage, pork belly, topped with okonomi sauce, mayo, bonito." data-image="https://i0.wp.com/www.taberu.tv/wp-content/uploads/2023/04/Okonomiyaki-osaka-taberu.png?resize=800%2C530&ssl=1" data-img-large="https://i0.wp.com/www.taberu.tv/wp-content/uploads/2023/04/Okonomiyaki-osaka-taberu.png?resize=800%2C530&ssl=1"><img src="https://i0.wp.com/www.taberu.tv/wp-content/uploads/2023/04/Okonomiyaki-osaka-taberu.png?resize=800%2C530&ssl=1" alt="Okonomiyaki" loading="lazy"><div class="card-content"><h3>Okonomiyaki</h3><div class="price">$11.25 <small>/ osaka style</small></div></div></div>
+      <div class="product-card" data-category="japanese" data-name="Mochi ice cream" data-price="6.50" data-desc="Three pieces: green tea, mango, red bean – sweet rice dough with ice cream filling." data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&auto=format"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=260&fit=crop" alt="Mochi ice cream" loading="lazy"><div class="card-content"><h3>Mochi ice cream</h3><div class="price">$6.50 <small>/ 3 pcs</small></div></div></div>
+      <!-- Mexican (8) -->
+      <div class="product-card" data-category="mexican" data-name="Tacos al pastor" data-price="9.95" data-desc="Three soft corn tortillas, marinated pork, pineapple, onion, cilantro, salsa verde." data-image="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=800&auto=format"><img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400&h=260&fit=crop" alt="Tacos al pastor" loading="lazy"><div class="card-content"><h3>Tacos al pastor</h3><div class="price">$9.95 <small>/ 3 pcs</small></div></div></div>
+      <div class="product-card" data-category="mexican" data-name="Burrito grande" data-price="11.50" data-desc="Large flour tortilla filled with rice, beans, grilled chicken, cheese, sour cream, salsa." data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=800&auto=format"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=260&fit=crop" alt="Burrito" loading="lazy"><div class="card-content"><h3>Burrito grande</h3><div class="price">$11.50 <small>/ whole</small></div></div></div>
+      <div class="product-card" data-category="mexican" data-name="Quesadilla" data-price="8.75" data-desc="Flour tortilla with melted Oaxaca cheese, served with pico de gallo and sour cream." data-image="https://theeastcoastkitchen.com/wp-content/uploads/2023/01/CHIPOTLE-STEAK-QUESADILLA-06-1.jpg" data-img-large="https://theeastcoastkitchen.com/wp-content/uploads/2023/01/CHIPOTLE-STEAK-QUESADILLA-06-1.jpg"><img src="https://theeastcoastkitchen.com/wp-content/uploads/2023/01/CHIPOTLE-STEAK-QUESADILLA-06-1.jpg" alt="Quesadilla" loading="lazy"><div class="card-content"><h3>Quesadilla</h3><div class="price">$8.75 <small>/ cheese</small></div></div></div>
+      <div class="product-card" data-category="mexican" data-name="Nachos supreme" data-price="10.25" data-desc="Tortilla chips, refried beans, melted cheese, jalapeños, guacamole, sour cream." data-image="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=800&auto=format"><img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?w=400&h=260&fit=crop" alt="Nachos" loading="lazy"><div class="card-content"><h3>Nachos supreme</h3><div class="price">$10.25 <small>/ share</small></div></div></div>
+      <div class="product-card" data-category="mexican" data-name="Elote (street corn)" data-price="4.95" data-desc="Grilled corn on the cob, cotija cheese, chili powder, lime, crema." data-image="https://images.cookforyourlife.org/wp-content/uploads/2018/08/shutterstock_471417275.jpg" data-img-large="https://images.cookforyourlife.org/wp-content/uploads/2018/08/shutterstock_471417275.jpg"><img src="https://images.cookforyourlife.org/wp-content/uploads/2018/08/shutterstock_471417275.jpg" alt="Elote" loading="lazy"><div class="card-content"><h3>Elote</h3><div class="price">$4.95 <small>/ street</small></div></div></div>
+      <div class="product-card" data-category="mexican" data-name="Enchiladas verdes" data-price="12.50" data-desc="Corn tortillas filled with shredded chicken, topped with tomatillo sauce, crema, onion." data-image="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=800&auto=format"><img src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=400&h=260&fit=crop" alt="Enchiladas" loading="lazy"><div class="card-content"><h3>Enchiladas verdes</h3><div class="price">$12.50 <small>/ 3 pcs</small></div></div></div>
+      <div class="product-card" data-category="mexican" data-name="Chiles rellenos" data-price="13.25" data-desc="Roasted poblano peppers stuffed with cheese, battered and fried, served with salsa." data-image="https://blog.amigofoods.com/wp-content/uploads/2022/05/mexican-chile-relleno.jpg" data-img-large="https://blog.amigofoods.com/wp-content/uploads/2022/05/mexican-chile-relleno.jpg"><img src="https://blog.amigofoods.com/wp-content/uploads/2022/05/mexican-chile-relleno.jpg" alt="Chiles rellenos" loading="lazy"><div class="card-content"><h3>Chiles rellenos</h3><div class="price">$13.25 <small>/ 2 pcs</small></div></div></div>
+      <div class="product-card" data-category="mexican" data-name="Churros" data-price="5.50" data-desc="Cinnamon-sugar fried dough, served with warm chocolate dipping sauce." data-image="https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?w=800&auto=format"><img src="https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?w=400&h=260&fit=crop" alt="Churros" loading="lazy"><div class="card-content"><h3>Churros</h3><div class="price">$5.50 <small>/ 4 pcs</small></div></div></div>
+      <!-- Desserts (8) -->
+      <div class="product-card" data-category="desserts" data-name="Berry pancakes" data-price="11.50" data-desc="Fluffy buttermilk pancakes, mixed berries, maple syrup, vanilla mascarpone." data-image="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&auto=format"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400&h=260&fit=crop" alt="Berry pancakes" loading="lazy"><div class="card-content"><h3>Berry pancakes</h3><div class="price">$11.50 <small>/ stack</small></div></div></div>
+      <div class="product-card" data-category="desserts" data-name="Chocolate lava cake" data-price="7.95" data-desc="Warm chocolate lava cake with molten center, vanilla ice cream, raspberry coulis." data-image="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=800&auto=format"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=260&fit=crop" alt="Chocolate lava cake" loading="lazy"><div class="card-content"><h3>Chocolate lava</h3><div class="price">$7.95 <small>/ cake</small></div></div></div>
+      <div class="product-card" data-category="desserts" data-name="New York cheesecake" data-price="6.95" data-desc="Creamy cheesecake, graham cracker crust, topped with strawberry sauce." data-image="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=800&auto=format"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&h=260&fit=crop" alt="Cheesecake" loading="lazy"><div class="card-content"><h3>Cheesecake</h3><div class="price">$6.95 <small>/ NY style</small></div></div></div>
+      <div class="product-card" data-category="desserts" data-name="Crème brûlée" data-price="8.50" data-desc="Rich vanilla custard with caramelized sugar crust, fresh berries." data-image="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=800&auto=format"><img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=400&h=260&fit=crop" alt="Crème brûlée" loading="lazy"><div class="card-content"><h3>Crème brûlée</h3><div class="price">$8.50 <small>/ classic</small></div></div></div>
+      <div class="product-card" data-category="desserts" data-name="Apple crumble" data-price="7.25" data-desc="Warm baked apples, cinnamon oat topping, vanilla bean ice cream." data-image="https://www.sweeterytoronto.com/wp-content/uploads/2025/03/Caramel-Apple-Crumble-Recipe.png" data-img-large="https://www.sweeterytoronto.com/wp-content/uploads/2025/03/Caramel-Apple-Crumble-Recipe.png"><img src="https://www.sweeterytoronto.com/wp-content/uploads/2025/03/Caramel-Apple-Crumble-Recipe.png" alt="Apple crumble" loading="lazy"><div class="card-content"><h3>Apple crumble</h3><div class="price">$7.25 <small>/ with ice cream</small></div></div></div>
+      <div class="product-card" data-category="desserts" data-name="Gelato trio" data-price="6.50" data-desc="Three scoops: pistachio, stracciatella, salted caramel – artisan gelato." data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&auto=format"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=260&fit=crop" alt="Gelato" loading="lazy"><div class="card-content"><h3>Gelato trio</h3><div class="price">$6.50 <small>/ Italian</small></div></div></div>
+      <div class="product-card" data-category="desserts" data-name="Baklava" data-price="5.95" data-desc="Layers of phyllo, walnuts, honey syrup, pistachio – Mediterranean delight." data-image="https://www.cadburydessertscorner.com/hs-fs/hubfs/dc-website-2022/articles/top-trending-chocolate-desserts-for-eid-e-milad-2025/chocolate-baklava.webp?width=1015&height=571&name=chocolate-baklava.webp" data-img-large="https://www.cadburydessertscorner.com/hs-fs/hubfs/dc-website-2022/articles/top-trending-chocolate-desserts-for-eid-e-milad-2025/chocolate-baklava.webp?width=1015&height=571&name=chocolate-baklava.webp"><img src="https://www.cadburydessertscorner.com/hs-fs/hubfs/dc-website-2022/articles/top-trending-chocolate-desserts-for-eid-e-milad-2025/chocolate-baklava.webp?width=1015&height=571&name=chocolate-baklava.webp" alt="Baklava" loading="lazy"><div class="card-content"><h3>Baklava</h3><div class="price">$5.95 <small>/ 2 pcs</small></div></div></div>
+      <div class="product-card" data-category="desserts" data-name="Panna cotta" data-price="6.25" data-desc="Vanilla bean panna cotta, berry coulis, mint sprig." data-image="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&auto=format"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=260&fit=crop" alt="Panna cotta" loading="lazy"><div class="card-content"><h3>Panna cotta</h3><div class="price">$6.25 <small>/ berry</small></div></div></div>
+      <!-- Specials (8) -->
+      <div class="product-card" data-category="specials" data-name="Dragon roll" data-price="19.95" data-desc="Sushi roll with eel, avocado, cucumber, topped with thinly sliced avocado and unagi sauce." data-image="https://images.unsplash.com/photo-1617196035154-1e7e6e28b0db?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1617196035154-1e7e6e28b0db?w=800&auto=format"><img src="https://images.unsplash.com/photo-1617196035154-1e7e6e28b0db?w=400&h=260&fit=crop" alt="Dragon roll" loading="lazy"><div class="card-content"><h3>Dragon roll</h3><div class="price">$19.95 <small>/ special</small></div></div></div>
+      <div class="product-card" data-category="specials" data-name="Truffle risotto" data-price="22.50" data-desc="Carnaroli risotto with black truffle paste, porcini mushrooms, parmesan foam." data-image="https://www.morganwinery.com/wp-content/uploads/2024/05/Websiteblogphotos1-1160x700.webp" data-img-large="https://www.morganwinery.com/wp-content/uploads/2024/05/Websiteblogphotos1-1160x700.webp"><img src="https://www.morganwinery.com/wp-content/uploads/2024/05/Websiteblogphotos1-1160x700.webp" alt="Truffle risotto" loading="lazy"><div class="card-content"><h3>Truffle risotto</h3><div class="price">$22.50 <small>/ luxury</small></div></div></div>
+      <div class="product-card" data-category="specials" data-name="Gold leaf burger" data-price="49.00" data-desc="Wagyu beef patty, foie gras, truffle aioli, gold leaf, brioche bun – limited." data-image="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&auto=format"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=260&fit=crop" alt="Gold leaf burger" loading="lazy"><div class="card-content"><h3>Gold leaf burger</h3><div class="price">$49.00 <small>/ opulent</small></div></div></div>
+      <div class="product-card" data-category="specials" data-name="Matcha tiramisu" data-price="8.95" data-desc="Japanese twist on tiramisu: matcha-soaked ladyfingers, mascarpone, white chocolate." data-image="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&auto=format" data-img-large="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=800&auto=format"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&h=260&fit=crop" alt="Matcha tiramisu" loading="lazy"><div class="card-content"><h3>Matcha tiramisu</h3><div class="price">$8.95 <small>/ fusion</small></div></div></div>
+      <div class="product-card" data-category="specials" data-name="Lobster mac" data-price="26.50" data-desc="Lobster chunks, cavatappi, three-cheese cream sauce, topped with buttered breadcrumbs." data-image="https://www.thecoastalchef.com/wp-content/uploads/2025/04/Lobster-Mac-and-Cheese.webp" data-img-large="https://www.thecoastalchef.com/wp-content/uploads/2025/04/Lobster-Mac-and-Cheese.webp"><img src="https://www.thecoastalchef.com/wp-content/uploads/2025/04/Lobster-Mac-and-Cheese.webp" alt="Lobster mac" loading="lazy"><div class="card-content"><h3>Lobster mac</h3><div class="price">$26.50 <small>/ decadent</small></div></div></div>
+      <div class="product-card" data-category="specials" data-name="Poke bowl" data-price="15.90" data-desc="Ahi tuna, salmon, avocado, edamame, cucumber, sesame, ponzu sauce, sushi rice." data-image="https://forkinggoodfood.com/wp-content/uploads/2023/11/unique-poke-bowl-options.jpg" data-img-large="https://forkinggoodfood.com/wp-content/uploads/2023/11/unique-poke-bowl-options.jpg"><img src="https://forkinggoodfood.com/wp-content/uploads/2023/11/unique-poke-bowl-options.jpg" alt="Poke bowl" loading="lazy"><div class="card-content"><h3>Poke bowl</h3><div class="price">$15.90 <small>/ hawaiian</small></div></div></div>
+      <div class="product-card" data-category="specials" data-name="Chocolate fondant" data-price="9.50" data-desc="Molten dark chocolate cake, salted caramel ice cream, gold dust." data-image="http://upload.wikimedia.org/wikipedia/commons/6/6b/Chocolate_Fondant.jpg" data-img-large="http://upload.wikimedia.org/wikipedia/commons/6/6b/Chocolate_Fondant.jpg"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6b/Chocolate_Fondant.jpg" alt="Chocolate fondant" loading="lazy"><div class="card-content"><h3>Chocolate fondant</h3><div class="price">$9.50 <small>/ gourmet</small></div></div></div>
+      <div class="product-card" data-category="specials" data-name="Vegan tasting platter" data-price="18.25" data-desc="Assorted vegan bites: cauliflower wings, zucchini fritters, jackfruit tacos, quinoa salad." data-image="https://heatherchristo.com/wp-content/uploads/2016/12/The-Ultimate-Vegan-Appetizer-Platter-from-HeatherChristo.com_.jpg" data-img-large="https://heatherchristo.com/wp-content/uploads/2016/12/The-Ultimate-Vegan-Appetizer-Platter-from-HeatherChristo.com_.jpg"><img src="https://heatherchristo.com/wp-content/uploads/2016/12/The-Ultimate-Vegan-Appetizer-Platter-from-HeatherChristo.com_.jpg" alt="Vegan platter" loading="lazy"><div class="card-content"><h3>Vegan platter</h3><div class="price">$18.25 <small>/ plant-based</small></div></div></div>
+    </div>
+  </section>
+
+  <!-- CREATIVE + INFORMATIVE QUALITY SECTION (unchanged) -->
+  <section id="quality" class="container quality-section">
+    <h2 class="section-title">quality assurance</h2>
+    <div class="quality-grid">
+      <div class="quality-item">
+        <div class="quality-icon"><i class="fas fa-seedling"></i></div>
+        <h3>farm fresh</h3>
+        <div class="quality-metric">95% locally sourced</div>
+        <p>We partner with 20+ regional farms — produce is harvested within 24 hours of delivery.</p>
+      </div>
+      <div class="quality-item">
+        <div class="quality-icon"><i class="fas fa-utensil-spoon"></i></div>
+        <h3>master chefs</h3>
+        <div class="quality-metric">⭐ 3 Michelin stars combined</div>
+        <p>Our culinary team includes award‑winning chefs with 50+ years of collective experience.</p>
+      </div>
+      <div class="quality-item">
+        <div class="quality-icon"><i class="fas fa-recycle"></i></div>
+        <h3>eco packaging</h3>
+        <div class="quality-metric">100% compostable</div>
+        <p>All containers break down within 90 days — we've eliminated single‑use plastic entirely.</p>
+      </div>
+      <div class="quality-item">
+        <div class="quality-icon"><i class="fas fa-clock"></i></div>
+        <h3>lightning delivery</h3>
+        <div class="quality-metric">30 min or it's free</div>
+        <p>Average delivery time: 24 min • 98% of orders arrive hot and on time.</p>
+      </div>
+      <div class="quality-item">
+        <div class="quality-icon"><i class="fas fa-trophy"></i></div>
+        <h3>award‑winning</h3>
+        <div class="quality-metric">Best Food Delivery 2024</div>
+        <p>Recognized by the National Restaurant Association for excellence & innovation.</p>
+      </div>
+      <div class="quality-item">
+        <div class="quality-icon"><i class="fas fa-star"></i></div>
+        <h3>customer rated</h3>
+        <div class="quality-metric">4.9 ★ (2.5k+ reviews)</div>
+        <p>95% of customers would recommend us — “quality you can taste” is our promise.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="container">
+    <h2 class="section-title">visual feast</h2>
+    <div class="gallery-grid">
+      <!-- gallery unchanged (15 items) -->
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=500&h=500&fit=crop" alt="food gallery 1" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&h=500&fit=crop" alt="food gallery 2" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&h=500&fit=crop" alt="food gallery 3" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1543353071-087092ec393a?w=500&h=500&fit=crop" alt="food gallery 4" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=500&h=500&fit=crop" alt="food gallery 5" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://alhalabyasweets.com/wp-content/uploads/2024/05/Best-Arabic-Baklava-Sweets-in-Dubai.jpg" alt="food gallery 6" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://blog.amigofoods.com/wp-content/uploads/2022/05/mexican-chile-relleno.jpg" alt="food gallery 7" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&auto=format" alt="food gallery 8" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format" alt="food gallery 9" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&auto=format" alt="food gallery 10" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.cookforyourlife.org/wp-content/uploads/2018/08/shutterstock_471417275.jpg" alt="food gallery 11" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&auto=format" alt="food gallery 12" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&auto=format" alt="food gallery 13" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format" alt="food gallery 14" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&auto=format" alt="food gallery 15" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title" style="color: white;">get in touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info-cards">
+          <div class="info-card"><i class="fas fa-map-marker-alt"></i><h4>Visit Us</h4><p>12 Taste Avenue<br>Foodie District, FD 1001</p></div>
+          <div class="info-card"><i class="fas fa-phone-alt"></i><h4>Call Anytime</h4><p>+1 (800) 456-7890<br>Mon-Sun, 9am-11pm</p></div>
+          <div class="info-card"><i class="fas fa-envelope"></i><h4>Send a Message</h4><p>hello@foodmall.premium<br>support@foodmall.premium</p></div>
+        </div>
+        <div class="contact-form-card">
+          <h3>We'd love to hear from you</h3>
+          <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 FoodMall — premium experience. Now with Specials & Quality section.</div>
+    </div>
+  </section>
+
+  <!-- Modal 1 (product quick view) -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <img src="" alt="product image" id="modalImage">
+        <div class="modal-details">
+          <h2 id="modalName"></h2>
+          <p class="modal-desc" id="modalDesc"></p>
+          <div class="modal-price" id="modalPrice"></div>
+          <button class="buy-btn" id="modalBuy"><i class="fas fa-shopping-bag" style="margin-right: 8px;"></i>Buy now</button>
+          <button class="more-info-btn" id="moreInfoBtn"><i class="fas fa-info-circle"></i> More information</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 (extended info) -->
+  <div id="extendedModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeExtended">&times;</span>
+      <div class="extended-details" id="extendedDetails"></div>
+    </div>
+  </div>
+
+  <!-- NEW: Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content" style="max-width: 400px;">
+      <span class="close" id="closeLogin">&times;</span>
+      <div style="padding: 2rem;">
+        <h2 style="margin-bottom: 1.5rem; color: var(--text-dark);">Login to Admin</h2>
+        <input type="text" id="username" placeholder="Username" style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:30px; border:2px solid #eee;">
+        <input type="password" id="password" placeholder="Password" style="width:100%; padding:1rem; margin-bottom:1.5rem; border-radius:30px; border:2px solid #eee;">
+        <button id="loginBtn" class="btn" style="width:100%;">Sign In</button>
+        <p style="margin-top:1rem; text-align:center; color:#666;">(any credentials work in demo)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW: Admin Modal -->
+  <div id="adminModal" class="modal">
+    <div class="modal-content" style="max-width: 800px;">
+      <span class="close" id="closeAdmin">&times;</span>
+      <div style="padding: 2rem;">
+        <h2 style="color: var(--text-dark); margin-bottom: 1rem;">Admin Panel — Product Management</h2>
+        <!-- Form to add/edit product -->
+        <div id="adminProductForm" style="background: #faf3e8; padding: 1.5rem; border-radius: 30px; margin-bottom: 2rem;">
+          <h3 style="margin-bottom: 1rem;" id="formTitle">Add New Product</h3>
+          <input type="text" id="productName" placeholder="Product Name" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:30px; border:2px solid #eee;">
+          <select id="productCategory" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:30px; border:2px solid #eee;">
+            <option value="italian">Italian</option>
+            <option value="american">American</option>
+            <option value="healthy">Healthy</option>
+            <option value="japanese">Japanese</option>
+            <option value="mexican">Mexican</option>
+            <option value="desserts">Desserts</option>
+            <option value="specials">Specials</option>
+          </select>
+          <input type="number" id="productPrice" placeholder="Price (e.g. 12.99)" step="0.01" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:30px; border:2px solid #eee;">
+          <input type="text" id="productDesc" placeholder="Short description" style="width:100%; padding:0.75rem; margin-bottom:1rem; border-radius:30px; border:2px solid #eee;">
+          <div class="form-actions">
+            <button id="saveProductBtn" class="btn" style="flex:1;">Save Product</button>
+            <button id="cancelEditBtn" class="btn cancel-btn" style="flex:1; display:none;">Cancel</button>
+          </div>
+        </div>
+
+        <h3>Existing Products (demo)</h3>
+        <table class="admin-table">
+          <thead>
+            <tr><th>Name</th><th>Category</th><th>Price</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="adminProductTable"></tbody>
+        </table>
+        <p style="margin-top:1rem; color:#777;">Note: This admin panel is a front‑only demo and does not modify the main product grid.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Existing filter functionality
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const productCards = document.querySelectorAll('.product-card');
+      function filterProducts(category) {
+        productCards.forEach(card => {
+          card.style.display = (category === 'all' || card.dataset.category === category) ? 'block' : 'none';
+        });
+      }
+      categoryButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          categoryButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          filterProducts(this.dataset.category);
+        });
+      });
+      filterProducts('all');
+
+      // Existing modal logic (product modal, extended modal) – keep as is
+      const modal = document.getElementById('productModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalName = document.getElementById('modalName');
+      const modalDesc = document.getElementById('modalDesc');
+      const modalPrice = document.getElementById('modalPrice');
+      const buyBtn = document.getElementById('modalBuy');
+      const closeSpan = document.querySelector('#productModal .close');
+      const extendedModal = document.getElementById('extendedModal');
+      const extendedDetails = document.getElementById('extendedDetails');
+      const closeExtended = document.getElementById('closeExtended');
+      let currentProductName = '';
+
+      const extendedInfoMap = {
+        'Margherita pizza': { ingredients: 'San Marzano tomatoes, mozzarella, basil, EVOO', allergens: 'Dairy, gluten', calories: '820 kcal', prep: '20 min', chefTip: 'Best eaten fresh, add chili oil' },
+        'Pasta carbonara': { ingredients: 'Spaghetti, guanciale, egg yolks, pecorino, pepper', allergens: 'Eggs, dairy, gluten', calories: '750 kcal', prep: '15 min', chefTip: 'Authentic recipe, no cream' },
+        'Smash burger': { ingredients: 'Beef patty, cheddar, onions, pickles, brioche', allergens: 'Gluten, dairy', calories: '980 kcal', prep: '12 min', chefTip: 'Double smash for crispy edges' },
+        'Sushi platter': { ingredients: 'Salmon, tuna, avocado, cucumber, nori, sushi rice', allergens: 'Fish, soy', calories: '520 kcal', prep: '25 min', chefTip: 'Contains raw fish, consume immediately' },
+        'Tacos al pastor': { ingredients: 'Pork, pineapple, corn tortillas, cilantro, onion', allergens: 'None', calories: '420 kcal (3 pcs)', prep: '10 min', chefTip: 'Add salsa verde for extra kick' },
+        'Berry pancakes': { ingredients: 'Buttermilk, berries, maple syrup, mascarpone', allergens: 'Dairy, eggs, gluten', calories: '680 kcal', prep: '15 min', chefTip: 'Top with powdered sugar' },
+        'Dragon roll': { ingredients: 'Eel, avocado, cucumber, unagi sauce, sesame', allergens: 'Fish, soy, gluten', calories: '540 kcal', prep: '20 min', chefTip: 'Ask for extra unagi sauce' },
+        'Truffle risotto': { ingredients: 'Carnaroli rice, black truffle, porcini, parmesan', allergens: 'Dairy', calories: '720 kcal', prep: '25 min', chefTip: 'Stir in extra parmesan at the table' },
+        'Gold leaf burger': { ingredients: 'Wagyu beef, foie gras, truffle aioli, gold leaf', allergens: 'Dairy, gluten', calories: '1250 kcal', prep: '30 min', chefTip: 'Limited availability, reserve in advance' },
+        'Matcha tiramisu': { ingredients: 'Matcha, ladyfingers, mascarpone, white chocolate', allergens: 'Dairy, eggs, gluten', calories: '480 kcal', prep: '15 min', chefTip: 'Dust with extra matcha' },
+        'Lobster mac': { ingredients: 'Lobster, cavatappi, three-cheese cream, breadcrumbs', allergens: 'Dairy, gluten, shellfish', calories: '890 kcal', prep: '20 min', chefTip: 'Add a squeeze of lemon' },
+        'Poke bowl': { ingredients: 'Ahi tuna, salmon, avocado, edamame, ponzu', allergens: 'Fish, soy', calories: '620 kcal', prep: '15 min', chefTip: 'Mix well before eating' },
+        'Chocolate fondant': { ingredients: 'Dark chocolate, butter, sugar, flour, ice cream', allergens: 'Dairy, eggs, gluten', calories: '550 kcal', prep: '18 min', chefTip: 'Serve immediately for lava effect' },
+        'Vegan tasting platter': { ingredients: 'Cauliflower, zucchini, jackfruit, quinoa, etc', allergens: 'None', calories: '580 kcal', prep: '20 min', chefTip: 'Gluten-free option available' },
+        'default': { ingredients: 'Premium ingredients, ask for details', allergens: 'May contain common allergens', calories: '~650 kcal', prep: 'varies', chefTip: 'Chef’s special selection' }
+      };
+
+      function openModal(card) {
+        modalName.textContent = card.dataset.name || 'Delicious item';
+        modalDesc.textContent = card.dataset.desc || 'Freshly prepared.';
+        modalPrice.textContent = `$${card.dataset.price || '0.00'}`;
+        modalImg.src = card.dataset.imgLarge || card.dataset.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format';
+        modalImg.alt = card.dataset.name;
+        currentProductName = card.dataset.name;
+        modal.style.display = 'flex';
+      }
+      productCards.forEach(card => card.addEventListener('click', function() { openModal(this); }));
+
+      function closeModal(modalEl) { modalEl.style.display = 'none'; }
+      closeSpan.addEventListener('click', () => closeModal(modal));
+      window.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
+
+      buyBtn.addEventListener('click', () => { alert(`✨ "${modalName.textContent}" added to cart (demo).`); });
+
+      document.getElementById('moreInfoBtn').addEventListener('click', function() {
+        const info = extendedInfoMap[currentProductName] || extendedInfoMap['default'];
+        let html = `
+          <h3>${currentProductName} — details</h3>
+          <p><i class="fas fa-carrot"></i> <strong>Ingredients:</strong> ${info.ingredients}</p>
+          <p><i class="fas fa-exclamation-triangle"></i> <strong>Allergens:</strong> ${info.allergens}</p>
+          <p><i class="fas fa-fire"></i> <strong>Calories:</strong> ${info.calories}</p>
+          <p><i class="fas fa-clock"></i> <strong>Prep time:</strong> ${info.prep}</p>
+          <p><i class="fas fa-chef"></i> <strong>Chef's tip:</strong> ${info.chefTip}</p>
+          <hr>
+          <span class="badge">fresh</span><span class="badge">quality</span><span class="badge">popular</span>
+        `;
+        extendedDetails.innerHTML = html;
+        extendedModal.style.display = 'flex';
+      });
+
+      closeExtended.addEventListener('click', () => closeModal(extendedModal));
+      window.addEventListener('click', (e) => { if (e.target === extendedModal) closeModal(extendedModal); });
+
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thanks for reaching out! (Demo)');
+        this.reset();
+      });
+
+      // ---------- NEW LOGIN / ADMIN CODE ----------
+      const loginLink = document.getElementById('loginLink');
+      const adminLink = document.getElementById('adminLink');
+      const logoutLink = document.getElementById('logoutLink');
+      const loginModalEl = document.getElementById('loginModal');
+      const closeLogin = document.getElementById('closeLogin');
+      const loginBtn = document.getElementById('loginBtn');
+      const adminModalEl = document.getElementById('adminModal');
+      const closeAdmin = document.getElementById('closeAdmin');
+
+      let isLoggedIn = false;
+
+      function updateNavLinks() {
+        if (isLoggedIn) {
+          loginLink.style.display = 'none';
+          adminLink.style.display = 'inline-block';
+          logoutLink.style.display = 'inline-block';
+        } else {
+          loginLink.style.display = 'inline-block';
+          adminLink.style.display = 'none';
+          logoutLink.style.display = 'none';
+        }
+      }
+
+      // Open login modal
+      loginLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginModalEl.style.display = 'flex';
+      });
+
+      // Close login modal
+      closeLogin.addEventListener('click', () => closeModal(loginModalEl));
+      window.addEventListener('click', (e) => { if (e.target === loginModalEl) closeModal(loginModalEl); });
+
+      // Login action (any credentials)
+      loginBtn.addEventListener('click', () => {
+        // Simple demo: any non-empty username/password works
+        const user = document.getElementById('username').value.trim();
+        const pass = document.getElementById('password').value.trim();
+        if (user !== '' && pass !== '') {
+          isLoggedIn = true;
+          updateNavLinks();
+          closeModal(loginModalEl);
+          // Clear fields
+          document.getElementById('username').value = '';
+          document.getElementById('password').value = '';
+        } else {
+          alert('Please enter any username and password (demo).');
+        }
+      });
+
+      // Logout
+      logoutLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        isLoggedIn = false;
+        updateNavLinks();
+      });
+
+      // Open admin modal
+      adminLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        renderAdminTable();
+        adminModalEl.style.display = 'flex';
+      });
+
+      closeAdmin.addEventListener('click', () => closeModal(adminModalEl));
+      window.addEventListener('click', (e) => { if (e.target === adminModalEl) closeModal(adminModalEl); });
+
+      // Admin product data (demo)
+      let adminProducts = [
+        { id: 1, name: 'Dragon roll', category: 'specials', price: 19.95, desc: 'Sushi roll with eel, avocado, cucumber' },
+        { id: 2, name: 'Truffle risotto', category: 'specials', price: 22.50, desc: 'Carnaroli risotto with black truffle' },
+        { id: 3, name: 'Gold leaf burger', category: 'specials', price: 49.00, desc: 'Wagyu beef, foie gras, gold leaf' },
+        { id: 4, name: 'Margherita pizza', category: 'italian', price: 14.99, desc: 'Wood-fired thin crust, mozzarella, basil' }
+      ];
+      let nextId = 5;
+      let editingId = null;
+
+      function renderAdminTable() {
+        const tbody = document.getElementById('adminProductTable');
+        tbody.innerHTML = '';
+        adminProducts.forEach(p => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${p.name}</td>
+            <td>${p.category}</td>
+            <td>$${p.price.toFixed(2)}</td>
+            <td>
+              <button class="edit-btn" data-id="${p.id}"><i class="fas fa-edit"></i></button>
+              <button class="delete-btn" data-id="${p.id}"><i class="fas fa-trash"></i></button>
+            </td>
+          `;
+          tbody.appendChild(row);
+        });
+
+        // Attach edit/delete events
+        document.querySelectorAll('.edit-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const id = parseInt(e.currentTarget.dataset.id);
+            const product = adminProducts.find(p => p.id === id);
+            if (product) {
+              document.getElementById('productName').value = product.name;
+              document.getElementById('productCategory').value = product.category;
+              document.getElementById('productPrice').value = product.price;
+              document.getElementById('productDesc').value = product.desc;
+              editingId = id;
+              document.getElementById('formTitle').textContent = 'Edit Product';
+              document.getElementById('cancelEditBtn').style.display = 'block';
+            }
+          });
+        });
+
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const id = parseInt(e.currentTarget.dataset.id);
+            adminProducts = adminProducts.filter(p => p.id !== id);
+            renderAdminTable();
+          });
+        });
+      }
+
+      // Save new/edit product
+      document.getElementById('saveProductBtn').addEventListener('click', () => {
+        const name = document.getElementById('productName').value.trim();
+        const category = document.getElementById('productCategory').value;
+        const price = parseFloat(document.getElementById('productPrice').value);
+        const desc = document.getElementById('productDesc').value.trim();
+
+        if (!name || isNaN(price) || !desc) {
+          alert('Please fill all fields correctly.');
+          return;
+        }
+
+        if (editingId) {
+          // Update
+          const index = adminProducts.findIndex(p => p.id === editingId);
+          if (index !== -1) {
+            adminProducts[index] = { ...adminProducts[index], name, category, price, desc };
+          }
+          editingId = null;
+          document.getElementById('formTitle').textContent = 'Add New Product';
+          document.getElementById('cancelEditBtn').style.display = 'none';
+        } else {
+          // Add
+          adminProducts.push({ id: nextId++, name, category, price, desc });
+        }
+
+        // Clear form
+        document.getElementById('productName').value = '';
+        document.getElementById('productCategory').value = 'italian';
+        document.getElementById('productPrice').value = '';
+        document.getElementById('productDesc').value = '';
+        renderAdminTable();
+      });
+
+      // Cancel edit
+      document.getElementById('cancelEditBtn').addEventListener('click', () => {
+        editingId = null;
+        document.getElementById('productName').value = '';
+        document.getElementById('productCategory').value = 'italian';
+        document.getElementById('productPrice').value = '';
+        document.getElementById('productDesc').value = '';
+        document.getElementById('formTitle').textContent = 'Add New Product';
+        document.getElementById('cancelEditBtn').style.display = 'none';
+      });
+
+      // Initialize nav
+      updateNavLinks();
+    })();
+  </script>
+</body>
+</html>
